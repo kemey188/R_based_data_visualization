@@ -68,18 +68,3 @@ monitor_ts <- monitor_ts + xlab("日期") + ylab("卖家数") +
   labs(title = paste("案件占比较大appkey15天涉及卖家数走势（基准时间:", base_date,"）") )
 monitor_ts
 
-
-# 发邮件
-#install.packages(c('base64enc','sendmailR'))
-library(base64enc)
-library(sendmailR)
-
-from <- sprintf("<kemey@163.com>",  Sys.info()[4])
-to <- "<lkm900808@163.com>"
-subject <- "###主 题###"
-body <- list("###内 容###")
-sendmail(from, to, subject, body, control=list(smtpServer="mail.163.com"))
-
-
-
-
